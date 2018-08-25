@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Potencia de un numero</title>
+		<link rel="stylesheet" type="text/css" href="../css/Styles.css">
+    </head>
+    <body>
+        <fieldset id="fiel">    
+        <legend><b><u>Calcular la potencia de un numero:</u></b></legend>
+        <label for=""><b><u>Ingrese la Base:</u></b></label>
+        <input type="text" id="txtN1">
+        <br><br>
+        <label for=""><b><u>Ingrese el Exponente:</u></b></label>
+        <input type="text" id="txtN2">
+        <br><br>
+        <input type="button" onclick="Potencia();" value="Calcular">
+        <div id="result">
+        &nbsp;
+      </div>
+        </fieldset>
+    </body>
+    <script>
+        function Potencia() {
+            var res = "";
+            var h3 = document.createElement("h3");
+            var r = document.getElementById("result");
+            var n1 = document.getElementById('txtN1').value;
+            var n2 = document.getElementById('txtN2').value;
+            var var1 = parseInt(n1);
+            var var2 = parseInt(n2);
+            var pot = Math.pow(var1, var2);
+            res = var1 + "^" + var2 + " = " + pot;
+            h3.appendChild(document.createTextNode(res));
+            r.innerHTML="";
+            r.appendChild(h3);
+        }
+    </script>
+</html>

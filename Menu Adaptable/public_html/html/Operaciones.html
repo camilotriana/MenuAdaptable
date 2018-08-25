@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Operaciones principales con dos Numeros</title>
+		<link rel="stylesheet" type="text/css" href="../css/Styles.css">
+    </head>
+    <body>
+        <fieldset id="fiel">
+        <legend><b><u>Ingrese los dos numeros a operar</u></b></legend>
+        <label for=""><b><u>Numero 1:</u></b></label>
+        <input type="text" id="txtN1">
+        <br><br>
+        <label for=""><b><u>Numero 2:</u></b></label>
+        <input type="text" id="txtN2">
+        <br><br>
+        <input type="button" onclick="Operar();" value="Calcular">
+        <div id="result">
+        &nbsp;
+        </div>
+        <br />
+        <div id="result2">
+        &nbsp;
+        </div>
+        <br />
+        <div id="result3">
+        &nbsp;
+        </div>
+        <br />
+        <div id="result4">
+        &nbsp;
+        </div>
+        </fieldset>
+
+    </body>
+    <script>
+        function Operar() {
+            var sum = "";
+            var res = "";
+            var mul = "";
+            var div = "";
+            var prueba = "";
+            var prueba2 = "";
+            var prueba3 = "";
+            var prueba4 = "";
+            var h3 = document.createElement("h3");
+            var r = document.getElementById("result");
+            var r2 = document.getElementById("result2");
+            var r3 = document.getElementById("result3");
+            var r4 = document.getElementById("result4");
+            var n1 = document.getElementById('txtN1').value;
+            var n2 = document.getElementById('txtN2').value;
+            var suma = parseInt(n1) + parseInt(n2);
+            var resta = parseInt(n1) - parseInt(n2);
+            var multiplicacion = parseInt(n1) * parseInt(n2);
+            var division = parseInt(n1) / parseInt(n2);
+            sum = n1 + " + " + n2 + " = " + suma ;
+            res = n1 + " - " + n2 + " = " + resta;
+            mul = n1 + " * " + n2 + " = " + multiplicacion;
+            div = n1 + " / " + n2 + " = " + division;
+            prueba = h3.appendChild(document.createTextNode(sum));
+            r.innerHTML="";
+            r.appendChild(prueba);
+            prueba2 = h3.appendChild(document.createTextNode(res));
+            r2.innerHTML="";
+            r2.appendChild(prueba2);
+            prueba3 = h3.appendChild(document.createTextNode(mul));
+            r3.innerHTML="";
+            r3.appendChild(prueba3);
+            prueba4 = h3.appendChild(document.createTextNode(div));
+            r4.innerHTML="";
+            r4.appendChild(prueba4);
+        }
+    </script>
+</html>

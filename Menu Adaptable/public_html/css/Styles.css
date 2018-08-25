@@ -1,0 +1,15 @@
+body{
+	background-image: url("../imagenes/inteligencia.jpg");
+        color: #FFFFFF ;
+        font-size:  170%;
+        font-style: oblique;  
+}
+#fiel{
+    border-color: red;
+}
+h3{
+    font-size:  100%;
+}
+#result,#result2,#result3,#result4{
+    font-size: 150%;
+}
